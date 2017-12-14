@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">EdgeSampleApplications</string>
+    <string name="app_name">CryptoEdge</string>
     <string name="action_settings">Settings</string>
     <string name="edge_single_name">EdgeSingle</string>
     <string name="edge_single_list_name">EdgeSingleList</string>
@@ -18,7 +18,7 @@
     <string name="empty_list">Empty</string>
     <string name="feeds_contents">This is feeds</string>
 
-    <string name="label">Dem Coinz</string>
+    <string name="label">CryptoEdge</string>
     <string name="description">Test for remoteview long click API</string>
     <string name="test_long_click">long click test</string>
     <string name="test_click_notify">notify test</string>

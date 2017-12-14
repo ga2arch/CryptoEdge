@@ -11,7 +11,7 @@ import com.ga2arch.cryptoedge.actor.coinmarketcap.CoinMarketCapActor;
 import com.ga2arch.cryptoedge.actor.main.bean.CoinBean;
 import com.ga2arch.cryptoedge.actor.main.bean.CoinsBean;
 import com.ga2arch.cryptoedge.actor.main.request.GetCoinsRequest;
-import com.ga2arch.cryptoedge.application.BitcoinEdgeApp;
+import com.ga2arch.cryptoedge.application.CryptoEdgeApp;
 import com.ga2arch.cryptoedge.cocktail.CocktailListAdapterProvider;
 import com.ga2arch.cryptoedge.persistence.DatabaseService;
 import com.gabriele.actor.internals.AbstractActor;
@@ -35,7 +35,7 @@ public class CoinActor extends AbstractActor {
     @Override
     public void preStart() {
         super.preStart();
-        ((BitcoinEdgeApp) getContext()).getAppComponent().inject(this);
+        ((CryptoEdgeApp) getContext()).getAppComponent().inject(this);
         coinMarketCapActorRef = getActorContext().actorOf(Props.create(CoinMarketCapActor.class));
 
         startPolling();

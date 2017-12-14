@@ -9,7 +9,7 @@ import android.widget.RemoteViewsService.RemoteViewsFactory;
 
 import com.ga2arch.cryptoedge.R;
 import com.ga2arch.cryptoedge.actor.main.bean.CoinBean;
-import com.ga2arch.cryptoedge.application.BitcoinEdgeApp;
+import com.ga2arch.cryptoedge.application.CryptoEdgeApp;
 import com.ga2arch.cryptoedge.persistence.DatabaseService;
 import com.gabriele.actor.internals.ActorRef;
 
@@ -27,7 +27,7 @@ public class CocktailListAdapterFactory implements RemoteViewsFactory {
 
     public CocktailListAdapterFactory(Context context) {
         Log.d(TAG, "CocktailListAdapterFactory constructor ");
-        ((BitcoinEdgeApp) context).getAppComponent().inject(this);
+        ((CryptoEdgeApp) context).getAppComponent().inject(this);
     }
 
     @Override

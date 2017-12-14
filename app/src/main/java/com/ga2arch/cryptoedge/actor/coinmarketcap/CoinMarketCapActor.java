@@ -55,22 +55,22 @@ public class CoinMarketCapActor extends AbstractActor {
                 .enqueue(new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-                        onGetHomeFailure(sender, e);
+                        onGetCoinsFailure(sender, e);
                     }
 
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
-                        onGetHomeSuccess(sender, response);
+                        onGetCoinsSuccess(sender, response);
                     }
                 });
     }
 
-    private void onGetHomeSuccess(ActorRef sender, Response response) {
+    private void onGetCoinsSuccess(ActorRef sender, Response response) {
         Log.i(TAG, "got coins, processing");
 
         try (ResponseBody responseBody = response.body()) {
             if (!response.isSuccessful())
-                onGetHomeFailure(sender, new IOException("Unexpected code " + response));
+                onGetCoinsFailure(sender, new IOException("Unexpected code " + response));
 
             try {
                 String body = responseBody.string();
@@ -79,12 +79,12 @@ public class CoinMarketCapActor extends AbstractActor {
                 sender.tell(new CoinsBean(coins), getSelf());
 
             } catch (IOException e) {
-                onGetHomeFailure(sender, e);
+                onGetCoinsFailure(sender, e);
             }
         }
     }
 
-    private void onGetHomeFailure(ActorRef sender, IOException e) {
+    private void onGetCoinsFailure(ActorRef sender, IOException e) {
         Log.e(TAG, "failure getting coins: " + e.getMessage());
         sender.tell(new CoinsErrorBean(e.getMessage()), getSelf());
     }

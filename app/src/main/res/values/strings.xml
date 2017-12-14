@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EdgeSampleApplications</string>
+    <string name="action_settings">Settings</string>
+    <string name="edge_single_name">EdgeSingle</string>
+    <string name="edge_single_list_name">EdgeSingleList</string>
+    <string name="edge_single_plus_name">EdgeSinglePlus</string>
+    <string name="edge_feeds_name">EdgeFeeds</string>
+    <string name="description_edge_single">Sample panel for edge single mode</string>
+    <string name="description_edge_single_list">Sample panel for edge single list mode</string>
+    <string name="description_edge_single_plus">Sample panel for edge single plus mode</string>
+    <string name="description_edge_feeds">Sample panel for edge feeds mode</string>
+    <string name="vertical_text">This is a test panel to display vertical string on the 2nd screen !!!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title">Galaxy Note4 Revolving ProtoType</string>
+    <string name="main_text">Application can be used with extended Area</string>
+    <string name="empty_list">Empty</string>
+    <string name="feeds_contents">This is feeds</string>
+
+    <string name="label">Dem Coinz</string>
+    <string name="description">Test for remoteview long click API</string>
+    <string name="test_long_click">long click test</string>
+    <string name="test_click_notify">notify test</string>
+    <string name="remote_list_item_title">Item no. </string>
+    <string name="clicked">Clicked</string>
+    <string name="long_clicked">Long clicked</string>
+    <string name="remote_list_item_clicked">Item no.%d clicked</string>
+    <string name="remote_list_item_long_clicked">Color is %06x </string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cocktail-provider
+    label="@string/edge_single_name"
+    description="@string/description_edge_single"
+    previewImage="@drawable/bg_preview"
+    updatePeriodMills="1800000"
+    configure="com.ga2arch.bitcoinedge.MainActivity">
+</cocktail-provider>

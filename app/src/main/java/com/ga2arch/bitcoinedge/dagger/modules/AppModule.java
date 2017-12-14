@@ -1,5 +1,6 @@
 package com.ga2arch.bitcoinedge.dagger.modules;
 
+import android.app.AlarmManager;
 import android.app.Application;
 import android.content.Context;
 
@@ -55,6 +56,11 @@ public class AppModule {
                 .create();
     }
 
+    @Provides
+    @Singleton
+    static AlarmManager providesAlarmManager(Context context) {
+        return (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+    }
 
 
 }

@@ -10,9 +10,9 @@ public class CoinBean extends LoggableEntity {
     private String name;
     private String symbol;
     private String rank;
-    private String priceUsd;
-    private String priceEur;
-    private String priceBtc;
+    private BigDecimal priceUsd;
+    private BigDecimal priceEur;
+    private BigDecimal priceBtc;
     @SerializedName("percent_change_1h")
     private BigDecimal percentChange1h;
     @SerializedName("percent_change_24h")
@@ -40,11 +40,11 @@ public class CoinBean extends LoggableEntity {
         return rank;
     }
 
-    public String getPriceUsd() {
+    public BigDecimal getPriceUsd() {
         return priceUsd;
     }
 
-    public String getPriceBtc() {
+    public BigDecimal getPriceBtc() {
         return priceBtc;
     }
 
@@ -80,11 +80,11 @@ public class CoinBean extends LoggableEntity {
         this.rank = rank;
     }
 
-    public void setPriceUsd(String priceUsd) {
+    public void setPriceUsd(BigDecimal priceUsd) {
         this.priceUsd = priceUsd;
     }
 
-    public void setPriceBtc(String priceBtc) {
+    public void setPriceBtc(BigDecimal priceBtc) {
         this.priceBtc = priceBtc;
     }
 
@@ -104,11 +104,11 @@ public class CoinBean extends LoggableEntity {
         this.lastUpdated = lastUpdated;
     }
 
-    public String getPriceEur() {
+    public BigDecimal getPriceEur() {
         return priceEur;
     }
 
-    public void setPriceEur(String priceEur) {
+    public void setPriceEur(BigDecimal priceEur) {
         this.priceEur = priceEur;
     }
 }

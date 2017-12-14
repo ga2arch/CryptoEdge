@@ -3,9 +3,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/panel_vertical_margin"
-    android:paddingTop="@dimen/panel_vertical_margin" >
+    android:orientation="vertical">
 
     <ListView
         android:id="@+id/widgetlist"

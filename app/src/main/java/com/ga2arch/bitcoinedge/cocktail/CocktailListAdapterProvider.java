@@ -12,6 +12,8 @@ import com.ga2arch.bitcoinedge.R;
 import com.samsung.android.sdk.look.cocktailbar.SlookCocktailManager;
 import com.samsung.android.sdk.look.cocktailbar.SlookCocktailProvider;
 
+import static com.ga2arch.bitcoinedge.actor.main.CoinActor.INTENT_REFRESH_COINS;
+
 public class CocktailListAdapterProvider extends SlookCocktailProvider {
     private static final String TAG = "CocktailListAdapterProvider";
 
@@ -25,9 +27,9 @@ public class CocktailListAdapterProvider extends SlookCocktailProvider {
         views.setRemoteAdapter(R.id.widgetlist, intent);
         views.setEmptyView(R.id.widgetlist, R.id.emptylist);
 
-//        Intent refreshintent = new Intent("com.ga2arch.refresh");
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0xff, refreshintent, PendingIntent.FLAG_UPDATE_CURRENT);
-//        SlookCocktailManager.getInstance(context).setOnPullPendingIntent(cocktailIds[0], R.id.widgetlist, pendingIntent);
+        Intent refreshintent = new Intent(INTENT_REFRESH_COINS);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0xff, refreshintent, PendingIntent.FLAG_UPDATE_CURRENT);
+        SlookCocktailManager.getInstance(context).setOnPullPendingIntent(cocktailIds[0], R.id.widgetlist, pendingIntent);
 
         for (int cocktailId : cocktailIds) {
             cocktailManager.updateCocktail(cocktailId, views);

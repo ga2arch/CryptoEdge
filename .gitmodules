@@ -1,0 +1,3 @@
+[submodule "android-actor"]
+	path = android-actor
+	url = git@github.com:ga2arch/android-actor.git
